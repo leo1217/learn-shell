@@ -187,3 +187,46 @@ fi
 
 
 echo '>>>>>>>>>>>>>>>>>>>  文件测试运算符 >>>>>>>>>>>>>>>>>>>>>>'
+file=$0 #当前执行脚本文件
+if [ -r $file ]
+then 
+    echo "$file 可读"
+fi
+
+if [ -w $file ]
+then 
+    echo "$file 可写"
+fi
+
+
+if [ -x $file ]
+then 
+    echo "$file 可执行"
+fi
+
+
+if [ -f $file ]
+then 
+    echo "$file 是普通文件"
+fi
+
+
+if [ -e $file ]
+then 
+    echo "$file 文件存在"
+fi
+
+if [ -s $file ]
+then 
+    echo "$file 文件不是空文件"
+else
+    echo "$file 文件是空文件"
+fi
+
+
+
+dir="/Users/libiao/Desktop/shell/"
+if [ -e $dir ]
+then 
+    echo "$dir 目录存在"
+fi
